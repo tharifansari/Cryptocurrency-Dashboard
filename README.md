@@ -30,7 +30,7 @@ Bindings are available for many other programming languages too. One such bindin
 
 ## FEATHER
 
-Feather is a fast, lightweight, and easy-to-use binary file format for storing data frames. It has a few specific design goals:
+***Feather*** is a fast, lightweight, and easy-to-use binary file format for storing data frames. It has a few specific design goals:
 
 * Lightweight, minimal API: make pushing data frames in and out of memory as simple as possible
 
