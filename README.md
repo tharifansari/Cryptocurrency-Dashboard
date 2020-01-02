@@ -27,6 +27,17 @@ Tulip Indicators currently implements 104 indicators
 
 Bindings are available for many other programming languages too. One such binding for python is ***tulipy***.
 
+
+## FEATHER
+
+Feather is a fast, lightweight, and easy-to-use binary file format for storing data frames. It has a few specific design goals:
+
+* Lightweight, minimal API: make pushing data frames in and out of memory as simple as possible
+
+* Language agnostic: Feather files are the same whether written by Python or R code. Other languages can read and write Feather files, too.
+
+* High read and write performance. When possible, Feather operations should be bound by local disk performance.
+
 **Environment Setup**
 
 python -m pip install -r requirements.txt
