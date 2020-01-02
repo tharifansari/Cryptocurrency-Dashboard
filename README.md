@@ -34,10 +34,16 @@
   * Language agnostic: Feather files are the same whether written by Python or R code. Other languages can read and write Feather files, too.
 
   * High read and write performance. When possible, Feather operations should be bound by local disk performance.
-  <br>  <br>
+
+### SCREENSHOTS
+
+![Screenshot](screenshots/home.png)
+![Screenshot](screenshots/financial_analysis_result.png)
+![Screenshot](screenshots/percentage_result.png)
+
 
 **Environment Setup**
 
 python -m pip install -r requirements.txt
 
-![Screenshot](screenshots/home.png)
+
