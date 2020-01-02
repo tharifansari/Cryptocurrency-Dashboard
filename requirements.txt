@@ -1,0 +1,8 @@
+pandas
+numpy
+ccxt
+tulipy
+feather-format
+flask
+loguru
+tinydb
