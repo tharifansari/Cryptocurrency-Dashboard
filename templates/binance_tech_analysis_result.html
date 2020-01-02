@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .login-input {
+  width: 130px;
+}
+
+.form-button {
+  width: 80px;
+  height: 35px;
+}
+
+.signup-box {
+  margin: auto;
+  width: 325px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+.settings-box {
+  margin: auto;
+  width: 325px;
+}
+
+.signup-area {
+  padding: 30px;
+}
+
+.settings-area {
+  padding: 30px;
+}
+</style>
+</head>
+<body>
+        <section class="hero is-primary is-bold is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                <div class="columns">
+                    <div class="column is-auto">
+                        <br>
+                        {% if comparision_type == "Standard Deviation" %}
+                        <p class="title is-3">The <i>{{comparision_type}}</i> for <i>{{comparision_value}}</i> value is:</p>
+                        <br>
+                        <p class="title is-2"><b><i>{{res}}</i></b></p>
+                        <br><br>
+                        <p class="subtitle is-5">
+                                In statistics, the standard deviation (SD) is a measure of the amount of variation or dispersion of a set of values.
+                                <br><br>
+                                A low standard deviation indicates that the values tend to be close to the mean (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.                            
+                        </p>                        
+                        {% endif %}
+
+                        {% if comparision_type == "Simple Moving Average" %}
+                        <p class="title is-3">The <i>{{comparision_type}}</i> for <i>{{comparision_value}}</i> value is:</p>
+                        <br>
+                        <p class="title is-2"><b><i>{{res}}</i></b></p>
+                        <br><br>
+                        <p class="subtitle is-5">
+                                A simple moving average (SMA) is an arithmetic moving average calculated by adding recent closing prices and then dividing that by the number of time periods in the calculation average.<br> 
+                                A simple, or arithmetic, moving average that is calculated by adding the closing price of the security for a number of time periods and then dividing this total by that same number of periods.
+                            </p>
+                        {% endif %}    
+
+                        {% if comparision_type == "Weighted Moving Average" %}
+                        <p class="title is-3">The <i>{{comparision_type}}</i> for <i>{{comparision_value}}</i> value is:</p>
+                        <br>
+                        <p class="title is-2"><b><i>{{res}}</i></b></p>
+                        <br><br>
+                        <p class="subtitle is-5">
+                                A Weighted Moving Average puts more weight on recent data and less on past data. This is done by multiplying each bar's price by a weighting factor. Because of its unique calculation, WMA will follow prices more closely than a corresponding Simple Moving Average.</p>
+                        {% endif %}
+
+                        {% if comparision_type == "Zero-Lag exponential moving average" %}
+                        <p class="title is-3">The <i>{{comparision_type}}</i> for <i>{{comparision_value}}</i> value is:</p>
+                        <br>
+                        <p class="title is-2"><b><i>{{res}}</i></b></p>
+                        <br><br>
+                        <p class="subtitle is-5">
+                                In statistics, the standard deviation (SD) is a measure of the amount of variation or dispersion of a set of values.
+                                <br><br>
+                                A low standard deviation indicates that the values tend to be close to the mean (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.                            
+                                
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+                      
+</body>
+</html>

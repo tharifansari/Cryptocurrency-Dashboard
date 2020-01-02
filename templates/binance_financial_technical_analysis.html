@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+
+        /* CodePen demo */
+        body {
+        background: #2a2a2b;
+        color: #fff;
+        text-align: center;
+        font-family: Arial, Helvetica;
+        }
+
+        /* Custom dropdown */
+        .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px; /* demo only */
+        }
+
+        .custom-dropdown select {
+        background-color: #1abc9c;
+        color: #fff;
+        font-size: inherit;
+        padding: .5em;
+        padding-right: 2.5em; 
+        border: 0;
+        margin: 0;
+        border-radius: 3px;
+        text-indent: 0.01px;
+        text-overflow: '';
+        -webkit-appearance: button; /* hide default arrow in chrome OSX */
+        }
+
+        .custom-dropdown::before,
+        .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        }
+
+        .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 1em;
+        font-size: .625em;
+        line-height: 1;
+        right: 1.2em;
+        top: 50%;
+        margin-top: -.5em;
+        }
+
+        .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 3px 3px 0;
+        }
+        
+        .custom-dropdown::before {
+        background-color: rgba(0,0,0,.15);
+        }
+
+        .custom-dropdown::after {
+        color: rgba(0,0,0,.4);
+        }
+        input[type=submit] {
+        border: none; /*rewriting standard style, it is necessary to be able to change the size*/
+        background-color: #1abc9c;
+        height: 30px;
+        width: 75px;
+        font-size: 1em;
+        font-weight: 600;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Select relevant option from the drop down menu </h1>
+    <br><br><br><br>
+    <form action="/financial_technical_analysis" method="POST">
+        <span class="custom-dropdown big">
+                <select name="comparision">
+                        <option value="" disabled selected>Type of analysis on OHLCV</option>    
+                        <option value="sma">Simple Moving average</option>
+                        <option value="stddev">Standard Deviation</option>
+                        <option value="wma">Weighted moving average</option>
+                        <option value="zlema">Zero lag exponential moving average</option>
+                </select>
+        </span>
+        <br>    
+        <br><br><br>
+        <span class="custom-dropdown big">
+            <select name="comparision_data">
+                    <option value="" disabled selected>Data to be analyzed from OHLCV</option>    
+                    <option value="open">Open</option>
+                    <option value="high">High</option>
+                    <option value="low">Low</option>
+                    <option value="close">Close</option>
+                    <option value="value">Value</option>
+            </select>
+        </span>
+        <br><br><br><br>
+        <input  type="submit" name="submit" >
+    </form>
+
+
+    
+</body>
+</html>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .login-input {
+  width: 130px;
+}
+
+.form-button {
+  width: 80px;
+  height: 35px;
+}
+
+.signup-box {
+  margin: auto;
+  width: 325px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+.settings-box {
+  margin: auto;
+  width: 325px;
+}
+
+.signup-area {
+  padding: 30px;
+}
+
+.settings-area {
+  padding: 30px;
+}
+</style>
+  </head>
+  <body>
+        <title>Flaskex</title>
+        
+        <section class="hero is-primary is-bold is-medium">
+          <div class="hero-body">
+            <div class="container has-text-centered">
+              <div class="columns">
+                <div class="column is-auto">
+                  <br>
+                  <p class="title is-2">Cryptocurrency Dashboard</p>
+                  <br>
+                  <p class="subtitle is-4"><i>A Simple dashboard for analysis</i></p>
+                  <p class="subtitle is-5">&#x2022 Encrypted user authorizaton</p>
+                  <p class="subtitle is-5">&#x2022 Easy to understand</p>
+                </div>
+        
+                <div class="column is-auto">
+                  <div id="signup-box" class="signup-box">
+                    <div class="signup-area">
+                      <h1 class="title">Click from below to proeed</h1>
+                      <p class="subtitle is-5"><b><u>Click from below to proeed</u></b></p>
+                      <br>
+                      <a href="/login"><p class="subtitle is-4"><b>Log-In</b></p>  </a>
+                      <br><br>
+                      <a href="/sign_up"><p class="subtitle is-4"> <b> Sign-up </b></p>  </a>
+                      <br><br>
+                      <a href="/change_password"><p class="subtitle is-4"><b>Forgot Password </b></p>  </a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </body>
+</html>-->

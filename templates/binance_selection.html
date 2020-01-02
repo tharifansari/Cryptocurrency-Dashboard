@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        /* CodePen demo */
+        body {
+        background: #2a2a2b;
+        color: #fff;
+        text-align: center;
+        font-family: Arial, Helvetica;
+        }
+
+        /* Custom dropdown */
+        .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px; /* demo only */
+        }
+
+        .custom-dropdown select {
+        background-color: #1abc9c;
+        color: #fff;
+        font-size: inherit;
+        padding: .5em;
+        padding-right: 2.5em; 
+        border: 0;
+        margin: 0;
+        border-radius: 3px;
+        text-indent: 0.01px;
+        text-overflow: '';
+        -webkit-appearance: button; /* hide default arrow in chrome OSX */
+        }
+
+        .custom-dropdown::before,
+        .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        }
+
+        .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 1em;
+        font-size: .625em;
+        line-height: 1;
+        right: 1.2em;
+        top: 50%;
+        margin-top: -.5em;
+        }
+
+        .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 3px 3px 0;
+        }
+        
+        .custom-dropdown::before {
+        background-color: rgba(0,0,0,.15);
+        }
+
+        .custom-dropdown::after {
+        color: rgba(0,0,0,.4);
+        }
+        input[type=submit] {
+        border: none; /*rewriting standard style, it is necessary to be able to change the size*/
+        background-color: #1abc9c;
+        height: 30px;
+        width: 75px;
+        font-size: 1em;
+        font-weight: 600;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <h1> Please select the one from the below dropdown </h1>
+    <h1> and click on SUBMIT</h1>
+    <br><br><br><br><br><br>
+    <form action="/selection" method="POST">
+        <span class="custom-dropdown big">
+                <select name="selection">    
+                    <option value="1">Percentage</option>
+                    <option value="2">Financial Technical Analysis</option>
+                </select>
+            </span>
+            <br><br><br><br><br>
+            <input  type="submit" name="submit" >
+    </form>
+
+</body>
+
+</html>

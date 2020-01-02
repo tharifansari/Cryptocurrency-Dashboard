@@ -1,0 +1,191 @@
+
+        <!--<h2>Sign up page</h2>
+
+        <form action="/add_user" method="post">
+            Username:<br>
+            <input type="text" name="username">
+            <br>
+            Password:<br>
+            <input type="password" name="password">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form> -->
+
+        <html>
+                <head>
+                    <style>
+                        @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+                
+                .login-page {
+                  width: 360px;
+                  padding: 8% 0 0;
+                  margin: auto;
+                }
+                .form {
+                  position: relative;
+                  z-index: 1;
+                  background: #FFFFFF;
+                  max-width: 400px;
+                  margin: 0 auto 100px;
+                  /*margin-left: 50%;
+                  margin-right: -60%;*/
+                  padding: 45px;
+                  text-align: center;
+                  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+                }
+                .form input {
+                  font-family: "Roboto", sans-serif;
+                  outline: 0;
+                  background: #f2f2f2;
+                  width: 100%;
+                  border: 0;
+                  margin: 0 0 15px;
+                  padding: 15px;
+                  box-sizing: border-box;
+                  font-size: 14px;
+                }
+                .form .submit_button {
+                  font-family: "Roboto", sans-serif;
+                  text-transform: uppercase;
+                  outline: 0;
+                  background: #32a2a8;
+                  width: 100%;
+                  border: 0;
+                  padding: 15px;
+                  color: #FFFFFF;
+                  font-size: 14px;
+                  -webkit-transition: all 0.3 ease;
+                  transition: all 0.3 ease;
+                  cursor: pointer;
+                }
+                .form button:hover,.form button:active,.form button:focus {
+                  background: #32a2a8;
+                }
+                .form .message {
+                  margin: 15px 0 0;
+                  color: #b3b3b3;
+                  font-size: 12px;
+                }
+                .form .message a {
+                  color: #32a2a8;
+                  text-decoration: none;
+                }
+                .form .register-form {
+                  display: none;
+                }
+                .container {
+                  position: relative;
+                  z-index: 1;
+                  max-width: 300px;
+                  margin: 0 auto;
+                }
+                .container:before, .container:after {
+                  content: "";
+                  display: block;
+                  clear: both;
+                }
+                .container .info {
+                  margin: 50px auto;
+                  text-align: center;
+                }
+                .container .info h1 {
+                  margin: 0 0 15px;
+                  padding: 0;
+                  font-size: 36px;
+                  font-weight: 300;
+                  color: #1a1a1a;
+                }
+                .container .info span {
+                  color: #4d4d4d;
+                  font-size: 12px;
+                }
+                .container .info span a {
+                  color: #000000;
+                  text-decoration: none;
+                }
+                .container .info span .fa {
+                  color: #EF3B3A;
+                }
+                body {
+                  background: #32a2a8; /* fallback for old browsers */
+                  background: -webkit-linear-gradient(right, #32a2a8, #16718c);
+                  background: -moz-linear-gradient(right, #32a2a8, #16718c);
+                  background: -o-linear-gradient(right, #32a2a8, #16718c);
+                  background: linear-gradient(to left, #32a2a8, #16718c);
+                  font-family: "Roboto", sans-serif;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;      
+                }
+                    </style>
+
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+
+    if(form.password.value != "" ){
+      if(form.password.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.password.focus();
+        return false;
+      }
+      if(form.password.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.password.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.password.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.password.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.password.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.password.focus();
+      return false;
+    }
+
+    alert("You entered a valid password: " + form.password.value);
+    return true;
+  }
+
+</script>
+                </head>
+                <body>
+                <div class="login-page">
+                  <div class="form">
+                    <form action="/add_user" method="post" class="login-form" onsubmit="return checkForm(this);">
+                        <input type="text" name="username" placeholder="User-name">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="email" name="email" placeholder="E-mail address"/>
+                        <input class="submit_button" type="submit" value="Submit">
+                    </form> 
+                  </div>
+                </div>
+                </body>
+                </html>
+                
