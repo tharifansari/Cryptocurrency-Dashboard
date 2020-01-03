@@ -1,2 +1,2 @@
-* linguist-vendored
-*.py linguist-vendored=false
+templates/* linguist-vendored
+# *.py linguist-vendored=false
